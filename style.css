@@ -1,5 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box;
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  color: white; 
+  font-family: Poppins, sans-serif;
+}
+
+:root {
+  --sidebar-width: 320px; 
+}
+
+#container {
+  position: relative;
+  width: 100vw; 
+  height: 100vh; 
+  background-color: gray;
+}
+
+aside {
+  position: absolute;
+  left: 0;
+  width: var(--sidebar-width); 
+  height: 100vh; 
+  background-color: black;
+  padding: 24px 18px 0 24px;
+}
+
+main {
+  position: absolute;
+  width: calc(100vw - var(--sidebar-width));
+  right: 0; 
+  height: 100vh; 
+  background-color: rgb(77, 77, 77);
+}
+
+.points-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 0.3px solid gray;
+  margin: 30px 0px 30px 0; 
+  border-radius: 8px;
+}
+
+.points-container span {
+  padding: 6px 12px;
+  background-color: rgb(46, 46, 46);
+  border-radius: 8px;
+  margin: 10px 6px 9px 10px;
+  font-size: 15px;
+}
+
+.point-input-container {
+  margin: 7px 0 7px 0;
+}
+
+.point-input-container > * {
+  display: inline-block;
+  width: 100px;
+  height: 40px; 
+  border: none;
+  background-color: rgb(77, 77, 77);
+  border-radius: 7px;
+  padding-left: 10px;
+  outline: none;
+  color: white;
+}
+
+.point-input-container input:last-child {
+  margin-left: 30px;
+}
+
+#add-point-btn {
+  width: 100%; 
+  height: 50px;
+  background-color: rgb(58, 58, 58); 
+  border-radius: 14px;
+  transition: all 0.5s ease;
+  margin-top: 10px; 
+}
+
+#add-point-btn:hover {
+  background-color: rgb(68, 68, 68);
 }
